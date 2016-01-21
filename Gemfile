@@ -29,6 +29,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem for generating slugs
 gem 'friendly_id', '~> 5.1.0'
 
+# Use for markdown
+gem 'tinymce-rails', '~> 4.3', '>= 4.3.2'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
