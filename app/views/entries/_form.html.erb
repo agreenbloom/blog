@@ -1,17 +1,35 @@
 <%= form_for(@entry) do |f| %>
-  <% if @entry.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
+  <div class="form-inline">
+    <% if @entry.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
 
-      <ul>
-      <% @entry.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @entry.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="form-group">
+      <%= f.label :title, "Title" %>
+      <%= f.text_field :title, class: "form-control", placeholder: "Blog Title Here" %>
     </div>
-  <% end %>
+
+    <div class="form-group">
+      <%= f.label :category, "Category" %>
+      <%= f.text_field :category, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description, "Content" %>
+      <%= f.text_area :description, class: "tinymce" %>
+    </div>
+    
+  </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
+ 
 <% end %>

@@ -10,6 +10,7 @@ class EntriesController < ApplicationController
   # GET /entries/1
   # GET /entries/1.json
   def show
+     @entry
   end
 
   # GET /entries/new
@@ -64,11 +65,11 @@ class EntriesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_entry
-      @entry = Entry.find(params[:id])
+      @entry = Entry.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def entry_params
-      params[:entry]
+      params.require(:entry).permit(:description, :title, :slug, :payload, :type, :published_at, :tag_list, :category, :user_id)
     end
 end
