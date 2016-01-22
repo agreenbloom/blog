@@ -12,10 +12,8 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 
-# Use bootstrap for easy styling/ grid system
-gem 'bootstrap-sass', '~> 3.3.6'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -35,6 +33,10 @@ gem 'tinymce-rails', '~> 4.3', '>= 4.3.2'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'devise'
+
+# Use bootstrap for easy styling/ grid system
+gem 'less-rails-bootstrap'
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'
