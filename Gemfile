@@ -35,8 +35,7 @@ gem 'tinymce-rails', '~> 4.3', '>= 4.3.2'
 gem 'devise'
 
 # Use bootstrap for easy styling/ grid system
-gem 'less-rails-bootstrap'
-
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
