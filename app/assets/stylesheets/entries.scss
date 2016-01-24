@@ -1,3 +1,25 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+body{
+  margin: 0;
+}
+
 h1 {
   font-family: 'Kaushan Script', cursive;
+  text-align: center;
+  color: #AAEDD7;
+  font-size: 4em
+
+}
+
+
+.welcome {
+  background-color: #00C382;
+  width: 100%;
+  line-height: 4;
+  position: fixed;
+  top: 0;
 }

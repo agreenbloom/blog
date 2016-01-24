@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
-  before_action :set_entry, only: [:show, :edit, :update, :destroy]
+  # before_action :set_entry, only: [:show, :index]
 
   # GET /entries
   # GET /entries.json
@@ -10,7 +10,7 @@ class EntriesController < ApplicationController
   # GET /entries/1
   # GET /entries/1.json
   def show
-     @entry
+    @entry = Entry.friendly.find(params[:slug])
   end
 
   # GET /entries/new
@@ -26,6 +26,8 @@ class EntriesController < ApplicationController
   # POST /entries.json
   def create
     @entry = Entry.new(entry_params)
+    # @entry.admin = current_user
+    @entry.published_at = Time.now
 
     respond_to do |format|
       if @entry.save
@@ -64,12 +66,12 @@ class EntriesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_entry
-      @entry = Entry.friendly.find(params[:id])
-    end
+    # def set_entry
+    #   @entry = Entry.friendly.find(params[:slug])
+    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def entry_params
-      params.require(:entry).permit(:description, :title, :slug, :payload, :type, :published_at, :tag_list, :category, :user_id)
+      params.require(:entry).permit(:description, :title, :published_at, :slug, :category, :user_id)
     end
 end

@@ -45,4 +45,6 @@ ActiveRecord::Schema.define(version: 20160122180447) do
     t.datetime "updated_at",   null: false
   end
 
+  add_index "entries", ["slug"], name: "index_entries_on_slug", using: :btree
+
 end

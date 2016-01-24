@@ -7,10 +7,10 @@ class Entry < ActiveRecord::Base
 	validates :slug, presence: true,  uniqueness: true
 
 
-	 scope :published, -> { where('published_at <= ?', Time.zone.now) }
+	scope :published, -> { where('published_at <= ?', Time.zone.now) }
 
 	def to_param
-    	slug
+  	 slug
 	end
 
 

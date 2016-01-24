@@ -2,7 +2,7 @@ class CreateEntries < ActiveRecord::Migration
   def change
     create_table :entries do |t|
   		t.string   "title"
-	    t.string   "slug"
+	    t.string   "slug", index: true
 	    t.text     "description"
 	    t.integer  "user_id"
 	    t.datetime "published_at"
