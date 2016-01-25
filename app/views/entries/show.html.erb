@@ -8,13 +8,14 @@
   <div class="blog-content">
     <p>	<%=@entry.description.html_safe %> </p>
   </div>
+
+  <div class="link">
+  <% if admin_signed_in? %>
+    <%=link_to 'Edit', edit_entry_path(@entry), class: "btn" %> |
+  <% else %>
+    <%= link_to 'Back', entries_path, class: "btn btn-primary" %>
+  <% end %>
+
+  </div>
 </div>
 
-<div class="link">
-<% if admin_signed_in? %>
-  <%= link_to 'Edit', edit_entry_path(@entry) %> |
-<% else %>
-  <%= link_to 'Back', entries_path %>
-<% end %>
-
-</div>

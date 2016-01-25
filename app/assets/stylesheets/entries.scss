@@ -18,6 +18,23 @@ h1 {
 
 }
 
+.link {
+  display: block;
+}
+.well{
+  background: white;
+  border: solid 1px #AAEDD7;
+}
+
+.hr {
+  border-color: #AAEDD7;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #F5FCFA;
+    border-color: #AAEDD7;
+}
 
 .welcome {
   background-color: #00C382;
@@ -32,18 +49,10 @@ h1 {
 }
 
 .blog-content {
+  display: block;
+
   p {
     color: gray;
     font-family: 'Roboto', sans-serif;
   }
-
-}
-
-.well{
-  background: white;
-  border: solid 1px #AAEDD7;
-}
-
-.hr {
-  border-color: #AAEDD7;
 }
