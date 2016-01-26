@@ -3,11 +3,15 @@
 <div class="welcome">
   <h1>Welcome to My Blog</h1>
 </div>
-<div class="well col-md-10 col-md-offset-1">
-    <% @entries.each do |entry| %>
-        <li><%= entry.title %>  </li>
-        <li><%= link_to 'Show', entry %></li>
-    <% end %>
 
+<div class="index-content">
+	<div class="well col-md-10 col-md-offset-1">
+    	<% @entries.each do |entry| %>
+    	    <h2><%= link_to entry.title, entry %>  </h2>
+    	    <hr>
+ 	        	<%= link_to "Continue reading", entry_path(entry)  %>
+	        <%= truncate("Once upon a time in a world far far away") { link_to "Continue", entry_path(entry) } %>
 
+        <% end %>
+	</div>
 </div>
