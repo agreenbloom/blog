@@ -6,11 +6,13 @@
 
 
 <div class="index-content">
-	<div class="well col-md-10 col-md-offset-1">
-    	<% @entries.each do |entry| %>
+	<% @entries.each do |entry| %>
+		<div class="well col-md-10 col-md-offset-1">
     	  <h2><%= link_to entry.title, entry %>  </h2>
     	  <hr>
-	      <%= truncate((entry.description), length: 400) { link_to "Continue", entry_path(entry) }.html_safe %>
-      <% end %>
-	</div>
+   		  <%= truncate((entry.description), escape: false, length: 400) do %>
+            <%= link_to "Continue reading", entry_path(entry)  %>
+          <% end %>		
+        </div>
+  <% end %>
 </div>
