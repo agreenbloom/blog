@@ -18,10 +18,6 @@ class EntriesController < ApplicationController
     @entry = Entry.new
   end
 
-  # GET /entries/1/edit
-  def edit
-  end
-
   # POST /entries
   # POST /entries.json
   def create
@@ -40,9 +36,15 @@ class EntriesController < ApplicationController
     end
   end
 
+  # GET /entries/1/edit
+  def edit
+    @entry = Entry.friendly.find(params[:slug])
+  end
+
   # PATCH/PUT /entries/1
   # PATCH/PUT /entries/1.json
   def update
+    @entry = Entry.friendly.find(params[:slug])
     respond_to do |format|
       if @entry.update(entry_params)
         format.html { redirect_to @entry, notice: 'Entry was successfully updated.' }
