@@ -38,13 +38,14 @@ ActiveRecord::Schema.define(version: 20160122180447) do
     t.string   "title"
     t.string   "slug"
     t.text     "description"
-    t.integer  "user_id"
+    t.integer  "admin_id"
     t.datetime "published_at"
     t.string   "category"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
 
+  add_index "entries", ["admin_id"], name: "index_entries_on_admin_id", using: :btree
   add_index "entries", ["slug"], name: "index_entries_on_slug", using: :btree
 
 end

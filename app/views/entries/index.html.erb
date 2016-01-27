@@ -4,10 +4,13 @@
   <h1>Welcome to My Blog</h1>
 </div>
 
-<% @entries.each do |entry| %>
-  <div class="well col-md-8 col-md-offset-2">
-    <%= link_to entry.title, entry %>
-  </div>
-<% end %>
 
-
+<div class="index-content">
+	<div class="well col-md-10 col-md-offset-1">
+    	<% @entries.each do |entry| %>
+    	  <h2><%= link_to entry.title, entry %>  </h2>
+    	  <hr>
+	      <%= truncate((entry.description), length: 400) { link_to "Continue", entry_path(entry) }.html_safe %>
+      <% end %>
+	</div>
+</div>

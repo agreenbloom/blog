@@ -1,5 +1,5 @@
 class Entry < ActiveRecord::Base
-
+  belongs_to :admin
 
 	extend FriendlyId
 	friendly_id :title, use: [:slugged, :finders]

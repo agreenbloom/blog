@@ -4,7 +4,7 @@ class CreateEntries < ActiveRecord::Migration
   		t.string   "title"
 	    t.string   "slug", index: true
 	    t.text     "description"
-	    t.integer  "user_id"
+	    t.integer  "admin_id", index: true
 	    t.datetime "published_at"
 	    t.string   "category"
       	t.timestamps null: false

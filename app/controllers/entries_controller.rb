@@ -26,7 +26,7 @@ class EntriesController < ApplicationController
   # POST /entries.json
   def create
     @entry = Entry.new(entry_params)
-    # @entry.admin = current_user
+    @entry.admin = current_admin
     @entry.published_at = Time.now
 
     respond_to do |format|
@@ -72,6 +72,6 @@ class EntriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def entry_params
-      params.require(:entry).permit(:description, :title, :published_at, :slug, :category, :user_id)
+      params.require(:entry).permit(:description, :title, :published_at, :slug, :category, :admin_id)
     end
 end
