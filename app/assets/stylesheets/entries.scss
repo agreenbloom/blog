@@ -1,6 +1,6 @@
-// font-family: 'Kaushan Script', cursive;
 // font-family: 'Lato', sans-serif;
 // font-family: 'Poiret One', cursive;
+// font-family: 'Raleway', sans-serif;
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -9,13 +9,13 @@
 
 body{
   margin: 0;
-  background-color: rgba(170, 237, 215, 0.12);
+  background-color: rgba(245, 245, 245, 0.58);
 }
 
 
 h1, h2 {
   text-align: center;
-  color: #AAEDD7;
+  color: #040429;
   // padding-bottom: 40px
 }
 
@@ -27,8 +27,9 @@ h1{
 }
 
 h2{
-  // font-style: 3rem;
-  font-family: 'Kaushan Script', cursive;
+  font-style: 2rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
 
 }
 
@@ -37,17 +38,17 @@ h2{
 }
 .well{
   background: white;
-  border: solid 1px #AAEDD7;
+  border: solid 1px #040429;
 }
 
 .hr {
-  border-color: #AAEDD7;
+  border-color: #040429;
 }
 
 .btn-primary {
     color: #fff;
     background-color: #F5FCFA;
-    border-color: #AAEDD7;
+    border-color: #040429;
 }
 
 .welcome {
@@ -71,6 +72,6 @@ h2{
 
   p {
     color: rgba(0, 0, 0, 0.65);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
   }
 }
