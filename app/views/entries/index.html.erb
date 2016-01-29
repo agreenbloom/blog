@@ -10,12 +10,14 @@
 
 <div class="index-content">
 	<% @entries.each do |entry| %>
+    <div class="entry-index">
 		<div class="well col-md-10 col-md-offset-1">
-    	  <h2><strong><%= link_to entry.title.capitalize, entry %>  </strong></h2>
-    	  <hr>
-   		  <%= truncate((entry.description), escape: false, length: 400) do %>
-            <%= link_to "Continue reading", entry_path(entry)  %>
-          <% end %>		
-        </div>
+  	  <h2><strong><%= link_to entry.title.capitalize, entry %>  </strong></h2>
+  	  <hr>
+ 		  <%= truncate((entry.description), escape: false, length: 400) do %>
+          <%= link_to "Continue reading", entry_path(entry)  %>
+        <% end %>
+    </div>
+    </div>
   <% end %>
 </div>
