@@ -9,7 +9,10 @@
 
 body{
   margin: 0;
-  background-color: rgba(245, 245, 245, 0.58);
+  // background-color: rgba(245, 245, 245, 0.58);
+  // background-color: #EBF5F4;
+  background: url("crossword.png")
+
 }
 
 
@@ -21,8 +24,10 @@ h1, h2 {
 
 
 h1{
-  font-size: 4em;
+  font-size: 11rem;
   font-family: 'Poiret One', cursive;
+  color: #F62459;
+  font-weight: 600;
 
 }
 
