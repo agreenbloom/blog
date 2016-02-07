@@ -1,21 +1,22 @@
 <!-- <p id="notice"><%= notice %></p> -->
 
-<div class="well col-md-10 col-md-offset-1">
-  <div class="blog-title">
-    <h2>  <%= @entry.title.capitalize %> </h2>
-    <hr>
-  </div>
-  <div class="blog-content">
-    <p>	<%=@entry.description.html_safe %> </p>
-  </div>
+<div class="blog-show">
+  <div class="well col-md-10 col-md-offset-1">
+    <div class="blog-title">
+      <h2>  <%= @entry.title.capitalize %> </h2>
+      <hr>
+    </div>
+    <div class="blog-content">
+      <p>	<%=@entry.description.html_safe %> </p>
+    </div>
 
-  <div class="link">
-  <% if admin_signed_in? %>
-    <%=link_to 'Edit', edit_entry_path(@entry), class: "btn" %> |
-  <% else %>
-    <%= link_to 'Back', entries_path, class: "btn btn-primary" %>
-  <% end %>
-
+    <div class="link">
+      <% if admin_signed_in? %>
+        <%=link_to 'Edit', edit_entry_path(@entry), class: "btn" %>
+      <% else %>
+        <%= link_to 'Back', entries_path, class: "btn btn-primary" %>
+      <% end %>
+    </div>
   </div>
 </div>
 

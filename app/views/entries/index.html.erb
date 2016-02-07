@@ -15,7 +15,9 @@
   	  <h2><strong><%= link_to entry.title.capitalize, entry %>  </strong></h2>
   	  <hr>
  		  <%= truncate((entry.description), escape: false, length: 400) do %>
+        <div class="continue-reading">
           <%= link_to "Continue reading", entry_path(entry)  %>
+        </div>
         <% end %>
     </div>
     </div>

@@ -11,7 +11,7 @@ body{
   margin: 0;
   // background-color: rgba(245, 245, 245, 0.58);
   // background-color: #EBF5F4;
-  background: url("crossword.png")
+  background: url("fabric_of_squares_gray.png")
 
 }
 
@@ -26,7 +26,8 @@ h1, h2 {
 h1{
   font-size: 11rem;
   font-family: 'Poiret One', cursive;
-  color: #F62459;
+  // color: #F62459;
+  color: #424897;
   font-weight: 600;
 
 }
@@ -36,8 +37,10 @@ h2{
   // font-family: 'Lato', sans-serif;
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
+
   a:visited {
-    color: #040429;
+    // color: #040429;
+    color: #9565B9;
   }
 }
 
@@ -49,12 +52,15 @@ h2{
     background: #F9F9F9;
     border: solid 0px;
     box-shadow: none;
+    border-left: solid 20px rgba(156, 224, 187, 0.26);
+    // border-bottom: solid 17px rgba(149, 101, 185, 0.18);
   }
 
 }
 
 hr {
-  border-color: #040429;
+  // border-color: #3a3335;
+  border-color: #9CE0BB;
 }
 
 .btn-primary {
@@ -88,4 +94,48 @@ hr {
     font-weight: 600;
 
   }
+}
+
+.continue-reading{
+  a {
+    // color: #040429;
+    color: #9565B9;
+  }
+  a:visited {
+    // color: #F4A1B1;
+    color: #424897;
+    background-color: #F4A1B1;
+  }
+  a:hover {
+    background-color: #F4A1B1;
+
+  }
+}
+
+.blog-show {
+  .well{
+    border-left: solid 20px rgba(156, 224, 187, 0.26);
+    border-bottom: solid 17px rgba(149, 101, 185, 0.18);
+    box-shadow: none;
+    border-right: 0px;
+    border-top: 0px;
+  }
+
+  h2{
+    color: #9565B9;
+  }
+
+  a {
+    color: #9565B9;
+  }
+  a:visited {
+    // color: #F4A1B1;
+    color: #424897;
+    background-color: #F4A1B1;
+  }
+  a:hover {
+    background-color: #F4A1B1;
+    color: #424897;
+  }
+
 }
